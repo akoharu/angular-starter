@@ -7,10 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule, HeaderComponent, FooterComponent} from './shared';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, FooterComponent
+    AppComponent, FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AuthModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

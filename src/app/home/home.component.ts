@@ -1,19 +1,16 @@
-import { environment } from './../../../environments/environment';
 import { Component, OnInit } from '@angular/core';
-
-import { UserService } from '../../core';
+import { UserService } from '../core';
 
 @Component({
-  selector: 'app-layout-header',
-  templateUrl: './header.component.html'
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HomeComponent implements OnInit {
+  currentUser: any;
   constructor(
     private userService: UserService
-  ) {}
-  profile = environment.profile;
-  currentUser: any;
-
+  ) { }
   logout() {
     this.userService.purgeAuth();
   }
@@ -24,4 +21,5 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
+
 }

@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,5 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './footer.component.html'
 })
 export class FooterComponent {
+  profile = environment.profile;
   today: number = Date.now();
 }

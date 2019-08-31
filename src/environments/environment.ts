@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  api_url: 'http://localhost:1337'
+  api_url: 'http://localhost:1337',
+  profile: {
+    name: 'KOHAR.SPACE',
+  }
 };
 
 /*

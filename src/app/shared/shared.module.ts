@@ -7,8 +7,8 @@ import { RouterModule } from '@angular/router';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
 // Materialize Component
-import { MzDropdownModule, MzButtonModule } from 'ngx-materialize'
-import { MzToastModule } from 'ngx-materialize'
+import { MzDropdownModule, MzButtonModule, MzTooltipModule, MzToastModule, MzModalModule, MzCheckboxModule} from 'ngx-materialize'
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   imports: [
@@ -18,7 +18,7 @@ import { MzToastModule } from 'ngx-materialize'
     HttpClientModule,
     RouterModule,
     MzDropdownModule,
-    MzButtonModule,MzToastModule
+    MzButtonModule,MzToastModule,MzTooltipModule,MzModalModule, MzCheckboxModule, NgSelectModule
   ],
   declarations: [
     ListErrorsComponent,
@@ -33,7 +33,7 @@ import { MzToastModule } from 'ngx-materialize'
     RouterModule,
     ShowAuthedDirective,
     MzButtonModule,
-    MzDropdownModule,MzToastModule
+    MzDropdownModule,MzToastModule,MzTooltipModule,MzModalModule, MzCheckboxModule, NgSelectModule
   ]
 })
 export class SharedModule {}

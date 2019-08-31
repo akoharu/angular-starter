@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -14,7 +15,7 @@ export class AuthComponent implements OnInit {
   errors: Errors = {message: '', errors: {}};
   isSubmitting = false;
   authForm: FormGroup;
-
+  profile = environment.profile;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -51,7 +52,7 @@ export class AuthComponent implements OnInit {
     this.userService
     .attemptAuth(this.authType, credentials)
     .subscribe(
-      data => this.router.navigateByUrl('/'),
+      data => this.router.navigateByUrl('/admin'),
       err => {
         this.errors = err;
         this.isSubmitting = false;

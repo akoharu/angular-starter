@@ -1,45 +1,21 @@
-<nav class="navbar indigo">
+<nav class="navbar red darken-2" *appShowAuthed="true">
   <div class="nav-wrapper">
-    <a class="brand-logo ml-2" routerLink="/">Kohar.Space</a>
+    <a class="brand-logo ml-2" routerLink="/admin">
+      <img appLazyLoad [src]="'/assets/logo.png'"  width="65" alt="" srcset="">
+    </a>
 
-    <!-- Show this for logged out users -->
-    <ul *appShowAuthed="false" class="right">
-
-      <li class="nav-item hide-on-med-and-down">
-        <a class="nav-link" routerLink="/">
-          Home
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login" routerLinkActive="active">
-          Sign in
-        </a>
-      </li>
-
-      <!-- <li class="nav-item">
-        <a class="nav-link"
-          routerLink="/register"
-          routerLinkActive="active">
-          Sign up
-        </a>
-      </li> -->
-
-    </ul>
-
-    <!-- Show this for logged in users -->
-    <ul *appShowAuthed="true" class="right">
+    <ul class="right">
 
       <li class="nav-item hide-on-med-and-down"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        <a class="btn-floating waves-effect waves-light btn-flat indigo" routerLink="/"><i class="material-icons">home</i></a>
+        <a class="btn-floating waves-effect waves-light btn-flat red darken-2" routerLink="/"><i class="material-icons">map</i></a>
       </li>
 
       <li class="nav-item" id="dropdown-user">
-        <a class="btn-floating waves-effect waves-light btn-flat indigo"><i class="material-icons">account_circle</i></a>
+        <a class="btn-floating waves-effect waves-light btn-flat red darken-2"><i class="material-icons">account_circle</i></a>
 
         <mz-dropdown [id]="'menu-dropdown-user'" [align]="'right'" [constrainWidth]="false" [belowOrigin]="true"
           [hover]="true" [dropdownButtonId]="'dropdown-user'">
-          <mz-dropdown-item><a [routerLink]="['/profile', currentUser.username]" routerLinkActive="active">{{ currentUser.username }}</a></mz-dropdown-item>
+          <mz-dropdown-item><a>{{ currentUser.username }}</a></mz-dropdown-item>
           <mz-dropdown-divider></mz-dropdown-divider>
           <mz-dropdown-item><a (click)="logout()">Logout</a></mz-dropdown-item>
           <mz-dropdown-divider></mz-dropdown-divider>

@@ -1,0 +1,29 @@
+<div id="container">
+  <div class="center-align">
+    <img [src]="'/assets/logo.png'" width="100">
+  </div>
+  <div id="content">
+    <div *appShowAuthed="true">
+      <div style="
+      margin: 20px;
+      font-style: italic;
+      font-weight: bold;">
+        Selamat datang {{currentUser.username}}!
+      </div>
+      <a [routerLink]="['/admin']" routerLinkActive="router-link-active"  class="waves-effect waves-light btn green"><i class="material-icons left">dashboard</i>Dashboard</a>
+      <div style="margin-top: 10px"></div>
+      <a (click)="logout()" class="waves-effect waves-light btn red"><i
+          class="material-icons left">power_settings_new</i>Logout</a>
+
+    </div>
+    <div *appShowAuthed="false">
+      <div style="
+      margin: 20px;
+      font-style: italic;
+      font-weight: bold;">
+        Silahkan login terlebih dahulu untuk masuk ke aplikasi E-SPRINT!
+      </div>
+      <a [routerLink]="['/login']" routerLinkActive="router-link-active"  class="waves-effect waves-light btn red"><i class="material-icons left">vpn_key</i>Login</a>
+    </div>
+  </div>
+</div>
