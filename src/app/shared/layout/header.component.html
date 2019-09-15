@@ -1,18 +1,9 @@
-<nav class="navbar red darken-2" *appShowAuthed="true">
+<div class="navbar-bg"></div>
+<nav class="navbar red darken-2 z-depth-0" *appShowAuthed="true">
   <div class="nav-wrapper">
-    <a class="brand-logo ml-2" routerLink="/admin">
-      <img appLazyLoad [src]="'/assets/logo.png'"  width="65" alt="" srcset="">
-    </a>
-
     <ul class="right">
-
-      <li class="nav-item hide-on-med-and-down"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        <a class="btn-floating waves-effect waves-light btn-flat red darken-2" routerLink="/"><i class="material-icons">map</i></a>
-      </li>
-
       <li class="nav-item" id="dropdown-user">
         <a class="btn-floating waves-effect waves-light btn-flat red darken-2"><i class="material-icons">account_circle</i></a>
-
         <mz-dropdown [id]="'menu-dropdown-user'" [align]="'right'" [constrainWidth]="false" [belowOrigin]="true"
           [hover]="true" [dropdownButtonId]="'dropdown-user'">
           <mz-dropdown-item><a>{{ currentUser.username }}</a></mz-dropdown-item>

@@ -1,7 +1,7 @@
 <div class="row">
   <app-list-errors [errors]="errors"></app-list-errors>
   <div class="center-align">
-    <img appLazyLoad [src]="'/assets/logo.png'" width="100">
+    <img appLazyLoad [src]="'/assets/logo.svg'" width="250">
   </div>
   <form class="col l4 offset-l4 s12" [formGroup]="authForm" (ngSubmit)="submitForm()">
     <fieldset [disabled]="isSubmitting">

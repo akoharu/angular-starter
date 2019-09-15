@@ -1,6 +1,6 @@
 #container {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 400px;
   height: 300px;
@@ -11,4 +11,12 @@
 #content {
     margin-top: 5%;
     text-align: center;
+}
+.bg-home {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: url('/assets/wifi_area.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
